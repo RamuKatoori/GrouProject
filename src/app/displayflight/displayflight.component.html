@@ -1,0 +1,22 @@
+<p>displayflight works!</p>
+<div>
+    {{fd | json}}
+    <table class="table">
+        <thead>
+            <th>Flight From</th>
+            <th>Fight To</th>
+            <th>Departure Date</th>
+            <th>Return Date</th>
+            <th>Traveller</th>
+            <th>FlightClass</th>
+        </thead>
+        <tr *ngFor="let i of fd">
+            <td>{{i.flightFrom}}</td>
+            <td>{{i.flightTo}}</td>
+            <td>{{i.departure | date}}</td>
+            <td>{{i.return | date}}</td>
+            <td>{{i.traveller}}</td>
+            <td>{{i.flightclass}}</td>
+        </tr>
+    </table>
+</div>

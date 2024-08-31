@@ -1,0 +1,13 @@
+.bookings{
+    background-color: #407ccb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+}
+
+#flight-child{
+    background-color: aliceblue;
+}
+
