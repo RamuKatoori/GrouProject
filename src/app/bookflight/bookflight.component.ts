@@ -18,7 +18,7 @@ export class BookflightComponent implements OnInit {
     console.log("flight added");
   }
   ngOnInit(): void {
-    this.book();
+    
   }
 
 }

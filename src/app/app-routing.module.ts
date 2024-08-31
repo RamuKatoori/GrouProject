@@ -2,10 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DisplayflightComponent } from './displayflight/displayflight.component';
+import { BookflightComponent } from './bookflight/bookflight.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { AdminMessageComponent } from './admin-message/admin-message.component';
 
 const routes: Routes = [
   {path: "Home", component:NavbarComponent},
-  {path: "mybookings", component:DisplayflightComponent}
+  {path: "mybookings", component:DisplayflightComponent},
+  {path: "bookings", component:BookflightComponent},
+  {path: "contactus", component:ContactusComponent},
+  {path: "admin-panel", component:AdminMessageComponent}
 ];
 
 @NgModule({

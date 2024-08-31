@@ -1,7 +1,13 @@
-#heading{
+.admin-heading{
     text-align: center;
-    font-size: larger;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
 .table {
     width: 100%;
     border-collapse: collapse;

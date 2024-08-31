@@ -16,7 +16,7 @@ export class FlightService {
     return this.fd;
   }
   AddFlight(flights : FlightDetails){
-    this.populateFlight();
+    // this.populateFlight();
     console.log("count :" + this.fd.length);
     this.fd.push(flights);
     console.log("count :" + this.fd.length);
@@ -24,6 +24,7 @@ export class FlightService {
   }
 
   getAll():any{
+    console.log(this.fd.length);
     return this.fd;
   }
 }

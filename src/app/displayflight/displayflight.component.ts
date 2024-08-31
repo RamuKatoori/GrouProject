@@ -20,6 +20,7 @@ export class DisplayflightComponent implements OnInit {
   // }
 
   ngOnInit(): void {
+    
     this.fd = this.flight.getAll();
   }
 
