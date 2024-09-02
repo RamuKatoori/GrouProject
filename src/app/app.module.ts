@@ -17,7 +17,7 @@ import { AdminMessageComponent } from './admin-message/admin-message.component';
     BookflightComponent,
     DisplayflightComponent,
     ContactusComponent,
-    AdminMessageComponent
+    AdminMessageComponent,
   ],
   imports: [
     BrowserModule,
