@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -9,6 +9,7 @@ import { DisplayflightComponent } from './displayflight/displayflight.component'
 import { FormsModule } from '@angular/forms';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AdminMessageComponent } from './admin-message/admin-message.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,13 @@ import { AdminMessageComponent } from './admin-message/admin-message.component';
     DisplayflightComponent,
     ContactusComponent,
     AdminMessageComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

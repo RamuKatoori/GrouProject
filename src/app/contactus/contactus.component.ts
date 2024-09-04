@@ -12,13 +12,14 @@ export class ContactusComponent implements OnInit {
   
   constructor(private contactservices:ContactusService) { }
   cont : Contactus = {fullName:"", email:"", contact:0, message:""}
-  Message(){
-    console.log("start")
-    this.contactservices.AddContact(this.cont);
-    console.log("end")
+  
+
+  addMsg(){
+    this.contactservices.SendMessage(this.cont).subscribe(data =>{
+      console.log("message sent");
+    })
+
   }
-
-
   ngOnInit(): void {
 
   }

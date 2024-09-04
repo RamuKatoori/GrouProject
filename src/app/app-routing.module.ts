@@ -5,9 +5,10 @@ import { DisplayflightComponent } from './displayflight/displayflight.component'
 import { BookflightComponent } from './bookflight/bookflight.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AdminMessageComponent } from './admin-message/admin-message.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: "Home", component:NavbarComponent},
+  {path: "", component:HomeComponent},
   {path: "mybookings", component:DisplayflightComponent},
   {path: "bookings", component:BookflightComponent},
   {path: "contactus", component:ContactusComponent},

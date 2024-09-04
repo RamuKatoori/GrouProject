@@ -5,7 +5,7 @@
 <main>
     <section class="contact-form-section">
         <h2>Get in Touch</h2>
-        <form class="contact-form" #addform="ngForm" (submit)="Message()">
+        <form class="contact-form" #addform="ngForm" (submit)="addMsg()">
             <div class="input-box">
                 <label for="name">Full Name</label>
                 <input id="name" type="text" name="fullName" [(ngModel)] = "cont.fullName" required>

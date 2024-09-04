@@ -14,9 +14,13 @@ export class AdminMessageComponent implements OnInit {
   contact : Contactus [] = [];
 
   ngOnInit(): void {
-    console.log("helllooooooo")
-    this.contact = this.contactservices.getAllContact();
-    console.log("code ended");
+    this.getMessages();
+  }
+  getMessages():void{
+    this.contactservices.getAllMessages().subscribe(data =>{
+      this.contact=data;
+      console.log("fetched data form db");
+    })
   }
 
 }
