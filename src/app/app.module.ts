@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AdminMessageComponent } from './admin-message/admin-message.component';
 import { HomeComponent } from './home/home.component';
+import {Fcity,Dcity} from './filter';
+import { ConfirmBookingComponent } from './confirm-booking/confirm-booking.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,15 @@ import { HomeComponent } from './home/home.component';
     ContactusComponent,
     AdminMessageComponent,
     HomeComponent,
+    Fcity,
+    Dcity,
+    ConfirmBookingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
