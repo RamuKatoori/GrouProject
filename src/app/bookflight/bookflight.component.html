@@ -1,4 +1,4 @@
-<div>
+<div class="form-component">
 <form #addForm="ngForm" (ngSubmit)="book()">
   <form class="search-container">
       <div class="input-box">
@@ -18,18 +18,19 @@
       </div>
 
       <div class="input-box">
-          <label class="label">DEPARTURE DATE</label>
-          <div>
-              <input type="date" class="input" [(ngModel)]="fd.departure" name="departure" required>
-          </div>
+        <label class="label">DEPARTURE DATE</label>
+        <div>
+            <input type="date" class="input" [(ngModel)]="fd.departure" name="departure" (change)="onDepartureDateChange()" [min]="minDepartureDate" required>
+        </div>
       </div>
-
+      
       <div class="input-box">
-          <label class="label">RETURN DATE</label>
-          <div>
-              <input type="date" class="input" [(ngModel)]="fd.return" name="return" required>
-          </div>
+        <label class="label">RETURN DATE</label>
+        <div>
+            <input type="date" class="input" [(ngModel)]="fd.return" name="return" [min]="minReturnDate" required>
+        </div>
       </div>
+      
     
     <div class="input-box">
         <label class="label">CLASS</label>

@@ -17,6 +17,7 @@ export class ContactusComponent implements OnInit {
   addMsg(){
     this.contactservices.SendMessage(this.cont).subscribe(data =>{
       console.log("message sent");
+      alert("Message sent successfully")
     })
 
   }

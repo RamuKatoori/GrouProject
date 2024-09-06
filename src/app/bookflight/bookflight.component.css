@@ -77,6 +77,10 @@
  */
 
  /* General styles */
+
+ .form-component{
+  margin-top: 30px;
+ }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
