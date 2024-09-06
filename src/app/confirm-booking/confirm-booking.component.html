@@ -100,12 +100,13 @@
 <form #updateform="ngForm" (ngSubmit)="saveData()">
     <div>
       <label for="flightId">Flight ID:</label>
-      <input type="text" id="flightId" name="flightId" [(ngModel)]="fa.bookingId"  required>
+      <input type="text" id="flightId" name="flightId"  [(ngModel)]="fa.bookingId"  required readonly>
+
     </div>
 
     <div>
         <label for="customerName">Customer Name:</label>
-        <input type="text" id="flightId" name="flightId" required>
+        <input type="text" id="flightId" name="customerName" [(ngModel)]="booking.customerName" required>
       </div>
   
     <div>
@@ -139,6 +140,6 @@
     </div>
   
     <div>
-      <button type="submit">Submit</button>
+      <button type="submit">Confirm</button>
     </div>
   </form>

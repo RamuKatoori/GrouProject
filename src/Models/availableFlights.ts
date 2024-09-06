@@ -5,5 +5,5 @@ export interface FlightsAvailable{
     departureDate : Date;
     returnDate : Date;
     flightClass : string;
-    price: string;
+    price: number;
 }

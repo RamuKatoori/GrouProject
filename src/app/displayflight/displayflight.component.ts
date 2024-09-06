@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BooikingServiceService } from 'src/BookingService/booiking-service.service';
+import { Bookings } from 'src/Models/bookings';
 import { FlightDetails } from 'src/Models/flightdetails';
 import { FlightService } from 'src/Services/flight.service';
 
@@ -9,19 +11,20 @@ import { FlightService } from 'src/Services/flight.service';
 })
 export class DisplayflightComponent implements OnInit {
 
-  constructor(private flight:FlightService) { }
-
-  fd: FlightDetails[] = [];
-
-  // populateFlight() {
-  //   this.fd = [{ flightFrom: "Mumbai", flightTo: "Hyd", departure: new Date("10/04/2022"), return: new Date("10/04/2022"), traveller: 1, flightclass: "econmy" },
-  //     { flightFrom: "Mumbai", flightTo: "Hyd", departure: new Date("10/04/2022"), return: new Date("10/04/2022"), traveller: 1, flightclass: "econmy" }
-  //   ]
-  // }
-
+  constructor(private book:BooikingServiceService) { }
+  bookings:Bookings;
+  bookId:number;
   ngOnInit(): void {
     
-    this.fd = this.flight.getAll();
+    
+  }
+
+  getDetails():any{
+    console.log("search starts");
+    this.book.getFlightById(this.bookId).subscribe(data=>{
+      this.bookings=data;
+      console.log("search ends");
+    })
   }
 
 }

@@ -32,8 +32,16 @@ export class ConfirmBookingComponent implements OnInit {
   }  
 
   saveData(){
+    this.booking.bookingId=this.fa.bookingId;
+    this.booking.flightFrom=this.fa.flightFrom;
+    this.booking.flightTo=this.fa.flightTo;
+    this.booking.departureDate=this.fa.departureDate;
+    this.booking.arrivalDate=this.fa.returnDate;
+    this.booking.flightClass=this.fa.flightClass;
+    this.booking.price=this.fa.price;
     this.confirm.AddBookings(this.booking).subscribe(data=>{
     console.log("added");
+    alert('Flight booked successfully!');
     })
   }
   

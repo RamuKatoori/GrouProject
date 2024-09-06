@@ -26,4 +26,8 @@ export class BooikingServiceService {
       })
     })
   }
+
+  getFlightById(bookingId:number): Observable<any>{
+    return this.http.get<Bookings>(this.req+"/"+bookingId);
+  }
 }
