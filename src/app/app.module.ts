@@ -12,6 +12,12 @@ import { AdminMessageComponent } from './admin-message/admin-message.component';
 import { HomeComponent } from './home/home.component';
 import {Fcity,Dcity} from './filter';
 import { ConfirmBookingComponent } from './confirm-booking/confirm-booking.component';
+import { AboutSectionComponent } from './about-section/about-section.component';
+import { TopFlightRoutesComponent } from './top-flight-routes/top-flight-routes.component';
+import { TravelBlogsComponent } from './travel-blogs/travel-blogs.component';
+import { DestinationCardsComponent } from './travel-blogs/destination-cards/destination-cards.component';
+import { LatestBlogsComponent } from './travel-blogs/latest-blogs/latest-blogs.component';
+import { HeroSectionComponent } from './travel-blogs/hero-section/hero-section.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +31,12 @@ import { ConfirmBookingComponent } from './confirm-booking/confirm-booking.compo
     Fcity,
     Dcity,
     ConfirmBookingComponent,
+    TopFlightRoutesComponent,
+    TravelBlogsComponent,
+    AboutSectionComponent,
+    HeroSectionComponent,
+    DestinationCardsComponent,
+    LatestBlogsComponent,
   ],
   imports: [
     BrowserModule,
