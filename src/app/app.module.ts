@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BookflightComponent } from './bookflight/bookflight.component';
 import { DisplayflightComponent } from './displayflight/displayflight.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AdminMessageComponent } from './admin-message/admin-message.component';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +18,8 @@ import { TravelBlogsComponent } from './travel-blogs/travel-blogs.component';
 import { DestinationCardsComponent } from './travel-blogs/destination-cards/destination-cards.component';
 import { LatestBlogsComponent } from './travel-blogs/latest-blogs/latest-blogs.component';
 import { HeroSectionComponent } from './travel-blogs/hero-section/hero-section.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +39,15 @@ import { HeroSectionComponent } from './travel-blogs/hero-section/hero-section.c
     HeroSectionComponent,
     DestinationCardsComponent,
     LatestBlogsComponent,
+    LoginComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

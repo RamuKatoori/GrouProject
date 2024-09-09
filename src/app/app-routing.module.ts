@@ -11,12 +11,15 @@ import { HeroSectionComponent } from './travel-blogs/hero-section/hero-section.c
 import { DestinationCardsComponent } from './travel-blogs/destination-cards/destination-cards.component';
 import { LatestBlogsComponent } from './travel-blogs/latest-blogs/latest-blogs.component';
 import { ConnectingflightComponent } from './travel-blogs/connectingflight/connectingflight.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { AuthGuard } from 'src/Guard/auth.guard';
 
 
 const routes: Routes = [
   {path: "", component:HomeComponent},
-  {path: "mybookings", component:DisplayflightComponent},
-  {path: "bookings", component:BookflightComponent},
+  {path: "mybookings", component:DisplayflightComponent, canActivate:[AuthGuard]},
+  {path: "bookings", component:BookflightComponent, canActivate:[AuthGuard]},
   {path: "contactus", component:ContactusComponent},
   {path: "admin-panel", component:AdminMessageComponent},
   {path: "confirmbookings/:bookingId", component:ConfirmBookingComponent},
@@ -24,7 +27,9 @@ const routes: Routes = [
   {path: "hero-section",component:HeroSectionComponent},
   {path: "destination-cards",component:DestinationCardsComponent},
   {path: "latest-blogs",component:LatestBlogsComponent},
-  {path: "connectingflight",component:ConnectingflightComponent}
+  {path: "connectingflight",component:ConnectingflightComponent},
+  {path: "login", component:LoginComponent},
+  {path: "signup", component:SignupComponent}
 ];
 
 @NgModule({
