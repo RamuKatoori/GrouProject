@@ -1,0 +1,97 @@
+.booking-form-container {
+    max-width: 400px; /* Adjust the width here */
+    margin: 40px auto;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  
+  .booking-form-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    background-color: #fff;
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .submit-button, .cancel-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .submit-button {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cancel-button {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  .cancel-button:hover {
+    background-color: #e53935;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Optional: Adding some responsive design tweaks */
+  @media (max-width: 768px) {
+    .booking-form-container {
+      padding: 20px;
+    }
+  
+    .submit-button, .cancel-button {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .form-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  

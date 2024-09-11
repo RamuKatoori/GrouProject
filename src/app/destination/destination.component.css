@@ -1,0 +1,102 @@
+
+.destination-container {
+    padding: 20px;
+  }
+  
+  .main-image {
+    max-width: 100%;
+    height: 200px;
+  }
+  
+  /* Styling for additional images section */
+  .additional-images {
+    margin-top: 20px;
+  }
+  
+  .images-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .image-item {
+    flex: 1 1 auto;
+    max-width: calc(33% - 10px); /* Adjust to fit the layout */
+  }
+  
+  .additional-image {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  /* Styling for the package section */
+  .package-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Adjust spacing between packages */
+    margin-top: 20px;
+  }
+  
+  .package {
+    flex: 1 1 calc(30% - 15px); /* Slightly decrease the width to ensure 3 per row */
+    max-width: calc(30% - 15px); /* Ensure three packages fit */
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .package img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .package-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .new-price {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  /* Button styling inside the package */
+  .info-box-button {
+    padding: 5px 10px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  
+  .info-box-button:hover {
+    background-color: #0056b3;
+  }
+  .package h4 {
+    font-size: 18px;
+    line-height: 1.5; /* Adjust this value to increase or decrease line spacing */
+    margin-bottom: 10px; /* Optional: Add more space between title and other content */
+  }
+  .package p {
+    font-size: 16px;
+    line-height: 0.9; /* Adjust this value for regular text */
+    margin-bottom: 5px; /* Optional: Adjust space between paragraphs */
+  }
+  

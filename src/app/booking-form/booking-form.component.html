@@ -1,0 +1,30 @@
+<div class="booking-form-container">
+    <h2 class="package-title">Book Your Package: {{ packageTitle }}</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="fromCity">From City</label>
+        <input type="text" id="fromCity" [(ngModel)]="fromCity" name="fromCity" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="toCity">To City</label>
+        <input type="text" id="toCity" [(ngModel)]="toCity" name="toCity" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input type="date" id="startDate" [(ngModel)]="startDate" name="startDate" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="returnDate">Return Date</label>
+        <input type="date" id="returnDate" [(ngModel)]="returnDate" name="returnDate" required>
+      </div>
+  
+      <div class="form-buttons">
+        <button type="submit" class="submit-button">Submit</button>
+        <button type="button" (click)="onCancel()" class="cancel-button">Cancel</button>
+      </div>
+    </form>
+  </div>
+  

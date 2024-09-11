@@ -1,0 +1,7 @@
+<h1 class="title">Famous Tourist Attractions</h1>
+<div class="tourist-attraction">
+  <div *ngFor="let attraction of attractions" class="attraction" (click)="navigateTo(attraction.route)">
+    <img [src]="attraction.img" [alt]="attraction.name" class="clickable-image">
+    <p>{{ attraction.name }}</p>
+  </div>
+</div>

@@ -18,6 +18,9 @@ import { FooterComponent } from './Footer/footer/footer.component';
 import { TermsComponent } from './Footer/terms/terms.component';
 import { PrivacyComponent } from './Footer/privacy/privacy.component';
 import { AboutUsComponent } from './Footer/about-us/about-us.component';
+import { TouristAttractionComponent } from './tourist-attraction/tourist-attraction.component';
+import { DestinationComponent } from './destination/destination.component';
+import { BookingFormComponent } from './booking-form/booking-form.component';
 
 
 
@@ -39,6 +42,9 @@ const routes: Routes = [
   {path: 'terms', component: TermsComponent},
   {path: 'privacy', component: PrivacyComponent},
   {path: 'about-us', component: AboutUsComponent},
+  {path: 'tourist-attraction', component: TouristAttractionComponent },
+  {path: 'destination/:name', component: DestinationComponent }, 
+  {path: 'booking/:packageTitle', component: BookingFormComponent },
 ];
 
 @NgModule({

@@ -1,0 +1,29 @@
+
+
+   <div class="destination-container">
+    <h1>{{ placeInfo.name }}</h1>
+    <p>{{ placeInfo.description }}</p>
+  
+  
+    <div class="main-image-container">
+    
+    </div>
+    <div class="packages">
+      <h3>Tour Packages</h3>
+      <div class="package-list">
+        <div class="package" *ngFor="let package of placeInfo.packages">
+          <h4>{{ package.title }}</h4>
+          <p><strong>Duration:</strong> {{ package.duration }}</p>
+          <p><strong>Locations:</strong> {{ package.locations }}</p>
+          <p><strong>Price:</strong> <span class="old-price">{{ package.oldPrice }}</span> {{ package.price }}</p>
+          <img [src]="package.image" alt="{{ package.title }}">
+          <div class="info-box">
+            <span><strong>Features:</strong> {{ package.features.join(', ') }}</span>
+            <button class="info-box-button" (click)="goTo(package.title)">Book Package</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

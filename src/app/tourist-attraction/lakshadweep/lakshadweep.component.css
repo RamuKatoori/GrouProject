@@ -1,0 +1,32 @@
+.tourist-attraction {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Ensures 5 images in a row */
+  gap: 20px;
+  justify-items: center;
+  padding: 10px; /* Reduced padding */
+  width: 100%; /* Ensures container takes full width */
+  max-width: 1200px; /* Optional: limit max width to ensure proper grid */
+  margin: 0 auto; /* Centers the container */
+}
+
+.attraction {
+  text-align: center;
+  cursor: pointer;
+}
+
+.clickable-image {
+  width: 90px; /* Reduce width slightly */
+  height: 90px; /* Reduce height slightly */
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.clickable-image:hover {
+  transform: scale(1.1);
+}
+
+.attraction p {
+  margin-top: 10px;
+  font-size: 14px; /* Reduce font size slightly */
+  font-weight: bold;
+}

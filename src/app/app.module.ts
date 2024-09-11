@@ -21,6 +21,9 @@ import { HeroSectionComponent } from './travel-blogs/hero-section/hero-section.c
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FooterComponent } from './Footer/footer/footer.component';
+import { TouristAttractionComponent } from './tourist-attraction/tourist-attraction.component';
+import { DestinationComponent } from './destination/destination.component';
+import { BookingFormComponent } from './booking-form/booking-form.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { FooterComponent } from './Footer/footer/footer.component';
     LatestBlogsComponent,
     LoginComponent,
     SignupComponent,
-    FooterComponent
+    FooterComponent,
+    TouristAttractionComponent,
+    DestinationComponent,
+    BookingFormComponent
   ],
   imports: [
     BrowserModule,
