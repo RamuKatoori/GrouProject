@@ -12,7 +12,7 @@ export class ContactusService {
   // cont: Contactus;
   // Contacts: Contactus[];
 
-  req: string = "https://localhost:7028/api/Contactus";
+  req: string = "https://localhost:7028/api/ContactRepo";
 
   getAllMessages(): Observable<Contactus[]> {
     return this.http.get<Contactus[]>(this.req);

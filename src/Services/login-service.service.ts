@@ -10,7 +10,7 @@ import { LoginUser } from 'src/Models/login';
 export class LoginServiceService {
 
   private req = "https://localhost:7028/api/Users";
-  private token = '';
+  token = '';
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -50,7 +50,7 @@ export class LoginServiceService {
     );
   }
 
-  private saveToken() {
+  saveToken() {
     localStorage.setItem("token", this.token);
   }
 

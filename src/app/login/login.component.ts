@@ -33,25 +33,28 @@ export class LoginComponent implements OnInit {
   }
   login(): void {
     let currentuser: LoginUser = {
-      userName: this.userform.value.username,  // Change 'username' to 'userName'
+      userName: this.userform.value.username,  
       password: this.userform.value.password
     };
     
-    this.loginservice.getUserToken(currentuser).subscribe(
-      (token: string) => {
-        if (token) {
-          localStorage.setItem("token", token);
-          this.route.navigateByUrl('/');
-        } else {
-          // this.errormsg = "Credentials Incorrect";
-          alert("Incorrect Credentials")
-        }
-      },
-      (error) => {
-        this.errormsg = "Login failed";
-        console.error("Error fetching token:", error);
+    try{
+      this.loginservice.getUserToken(currentuser);
+      if(this.loginservice.token!="")
+      {
+      localStorage.setItem("token",this.loginservice.token);
+      this.route.navigateByUrl('/customerlist');
       }
-    );
+      else{
+        // this.errormsg="Credentials Incorrect";
+        alert("Incorrect Credentials");
+        this.route.navigateByUrl('/login');
+      }
+    }
+    catch(Exception)
+    {
+      // this.errormsg="Credentials incorrect";
+      alert("incorrect credentials");
+    }
   }
 
 }
