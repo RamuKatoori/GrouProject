@@ -14,6 +14,11 @@ import { ConnectingflightComponent } from './travel-blogs/connectingflight/conne
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AuthGuard } from 'src/Guard/auth.guard';
+import { FooterComponent } from './Footer/footer/footer.component';
+import { TermsComponent } from './Footer/terms/terms.component';
+import { PrivacyComponent } from './Footer/privacy/privacy.component';
+import { AboutUsComponent } from './Footer/about-us/about-us.component';
+
 
 
 const routes: Routes = [
@@ -29,7 +34,11 @@ const routes: Routes = [
   {path: "latest-blogs",component:LatestBlogsComponent},
   {path: "connectingflight",component:ConnectingflightComponent},
   {path: "login", component:LoginComponent},
-  {path: "signup", component:SignupComponent}
+  {path: "signup", component:SignupComponent},
+  {path: 'footer', component: FooterComponent},
+  {path: 'terms', component: TermsComponent},
+  {path: 'privacy', component: PrivacyComponent},
+  {path: 'about-us', component: AboutUsComponent},
 ];
 
 @NgModule({

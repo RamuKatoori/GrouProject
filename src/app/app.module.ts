@@ -20,6 +20,7 @@ import { LatestBlogsComponent } from './travel-blogs/latest-blogs/latest-blogs.c
 import { HeroSectionComponent } from './travel-blogs/hero-section/hero-section.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { FooterComponent } from './Footer/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { SignupComponent } from './signup/signup.component';
     LatestBlogsComponent,
     LoginComponent,
     SignupComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
