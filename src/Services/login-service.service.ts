@@ -29,10 +29,10 @@ export class LoginServiceService {
   getUserById(username:string): any{
     return this.http.get<LoginUser>(this.req+"/"+username)
   }
-
+  
   getUserToken(user: LoginUser): Observable<string> {
     return this.getAllUsers().pipe(
-      map(users => users.find(x => x.userName === user.userName && x.password === x.password)),
+      map(users => users.find(x => x.userName === user.userName && x.password === user.password)), // Fix here
       map(foundUser => {
         if (foundUser) {
           this.token = "validuser";
@@ -49,6 +49,7 @@ export class LoginServiceService {
       })
     );
   }
+  
 
   saveToken() {
     if (this.token !== "") {
