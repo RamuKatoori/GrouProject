@@ -30,31 +30,26 @@ export class LoginComponent implements OnInit {
         ]),
       }
     );
-  }
-  login(): void {
-    let currentuser: LoginUser = {
-      userName: this.userform.value.username,  
-      password: this.userform.value.password
-    };
-    
-    try{
-      this.loginservice.getUserToken(currentuser);
-      if(this.loginservice.token!="")
-      {
-      localStorage.setItem("token",this.loginservice.token);
-      this.route.navigateByUrl('/customerlist');
-      }
-      else{
-        // this.errormsg="Credentials Incorrect";
-        alert("Incorrect Credentials");
-        this.route.navigateByUrl('/login');
-      }
-    }
-    catch(Exception)
-    {
-      // this.errormsg="Credentials incorrect";
-      alert("incorrect credentials");
-    }
+
   }
 
+  login(): void {
+    let currentuser: LoginUser = {
+      userName: this.userform.value.username,
+      password: this.userform.value.password
+    };
+    try {
+      this.loginservice.getUserToken(currentuser).subscribe(token => {
+        if (token === "validuser") {
+          localStorage.setItem("token", token);
+          this.route.navigateByUrl("");
+        } else {
+          alert("Incorrect Credentials");
+          this.route.navigateByUrl('/login');
+        }
+      });
+    } catch (Exception) {
+      this.errormsg = "Credentials incorrect";
+    }
+  }
 }

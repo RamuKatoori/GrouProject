@@ -32,11 +32,11 @@ export class LoginServiceService {
 
   getUserToken(user: LoginUser): Observable<string> {
     return this.getAllUsers().pipe(
-      map(users => users.filter(x => x.userName === user.userName && x.password === user.password)),
-      map(filteredUsers => {
-        if (filteredUsers.length > 0) {
-          localStorage.setItem("Username", filteredUsers[0].userName);
+      map(users => users.find(x => x.userName === user.userName && x.password === x.password)),
+      map(foundUser => {
+        if (foundUser) {
           this.token = "validuser";
+          localStorage.setItem("Username", foundUser.userName);
         } else {
           this.token = "";
         }
@@ -51,7 +51,9 @@ export class LoginServiceService {
   }
 
   saveToken() {
-    localStorage.setItem("token", this.token);
+    if (this.token !== "") {
+      localStorage.setItem("token", this.token);
+    }
   }
 
   isLoggedIn(): boolean {
@@ -73,4 +75,4 @@ export class LoginServiceService {
       return of(result as T);
     };
   }
-}
+}  
